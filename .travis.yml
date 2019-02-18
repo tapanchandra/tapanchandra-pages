@@ -12,15 +12,14 @@ before_install:
 - mkdir -p docs && rm -rf docs/*
 
 script:
-- docker run --name "my-blog" -P -v $(pwd):/src --volume /tmp/hugo-build-output:/docs jojomi/hugo
+- docker run --rm -it -v $(pwd):/src -u hugo jguyomard/hugo-builder hugo
 - ls
 - ls docs
 
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  local-dir: /docs/
-  on:
-    branch: master
+# deploy:
+#   provider: pages
+#   skip-cleanup: true
+#   github-token: $GITHUB_TOKEN  
+#   local-dir: /docs/
+#   on:
+#     branch: master
