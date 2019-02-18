@@ -13,9 +13,10 @@ before_install:
 
 script:
 - docker run --rm -it -v $(pwd):/src jguyomard/hugo-builder hugo
+- echo "tapanchandra.com" >> public/CNAME
 
 deploy:
-  provider: pages
+  provider: pages  
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  
   local-dir: public
