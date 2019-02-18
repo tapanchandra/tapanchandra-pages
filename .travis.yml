@@ -8,6 +8,7 @@ services:
 before_install:
 - mkdir -p docs
 - rm -rf docs/*
+- echo done
 
 script:
 - docker run --name "my-blog" -P -v $(pwd):/src --volume /tmp/hugo-build-output:/docs jojomi/hugo
