@@ -1,0 +1,20 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+before_install:
+- mkdir -p docs
+- rm -rf docs/*
+
+script:
+- docker run --name "my-blog" -P -v $(pwd):/src --volume /tmp/hugo-build-output:/docs jojomi/hugo
+
+# deploy:
+#   provider: script
+#   script: sh $TRAVIS_BUILD_DIR/.travis/push.sh
+#   skip_cleanup: true
+#   on:
+#     branch: master
