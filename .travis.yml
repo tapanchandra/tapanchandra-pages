@@ -6,9 +6,10 @@ services:
   - docker
 
 before_install:
-- mkdir -p docs
-- rm -rf docs/*
-- echo done
+- mkdir -p themes && rm -rf themes/*
+- git clone https://github.com/tapanchandra/hugo-theme-m10x themes/m10x
+- rm -rf themes/m10x/.git
+- mkdir -p docs && rm -rf docs/*
 
 script:
 - docker run --name "my-blog" -P -v $(pwd):/src --volume /tmp/hugo-build-output:/docs jojomi/hugo
@@ -18,4 +19,4 @@ script:
 #   script: sh $TRAVIS_BUILD_DIR/.travis/push.sh
 #   skip_cleanup: true
 #   on:
-#     branch: master
+#     branch: mastergit
