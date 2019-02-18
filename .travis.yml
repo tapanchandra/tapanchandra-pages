@@ -14,7 +14,8 @@ before_install:
 script:
 - docker run --rm -it -v $(pwd):/src jguyomard/hugo-builder hugo
 - ls public
-- mkdir -p public && echo "tapanchandra.com" > public/CNAME
+- mkdir -p public
+- sudo echo "tapanchandra.com" > public/CNAME
 - ls public
 
 deploy:
