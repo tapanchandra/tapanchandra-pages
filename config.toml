@@ -1,0 +1,14 @@
+baseURL = "http://blog.tapanchandra.com"
+languageCode = "en-us"
+title = "Rusty Coder's Blog"
+theme = "m10x"
+
+[params]
+  author = "John Doe"
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium."
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/gohugoio"
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/gohugoio"
