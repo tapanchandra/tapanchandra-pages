@@ -13,12 +13,14 @@ before_install:
 
 script:
 - docker run --name "my-blog" -P -v $(pwd):/src --volume /tmp/hugo-build-output:/docs jojomi/hugo
+- ls
+- ls /docs
 
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
-  local-dir: docs/
+  local-dir: /docs/
   on:
     branch: master
