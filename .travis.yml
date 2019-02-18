@@ -13,13 +13,11 @@ before_install:
 
 script:
 - docker run --rm -it -v $(pwd):/src jguyomard/hugo-builder hugo
-- ls
-- ls docs
 
-# deploy:
-#   provider: pages
-#   skip-cleanup: true
-#   github-token: $GITHUB_TOKEN  
-#   local-dir: /docs/
-#   on:
-#     branch: master
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  
+  local-dir: public
+  on:
+    branch: master
