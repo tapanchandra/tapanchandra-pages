@@ -14,9 +14,10 @@ before_install:
 script:
 - docker run --name "my-blog" -P -v $(pwd):/src --volume /tmp/hugo-build-output:/docs jojomi/hugo
 
-# deploy:
-#   provider: script
-#   script: sh $TRAVIS_BUILD_DIR/.travis/push.sh
-#   skip_cleanup: true
-#   on:
-#     branch: mastergit
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
