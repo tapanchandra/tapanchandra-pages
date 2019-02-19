@@ -4,11 +4,11 @@ title = "Rusty Coder's Blog"
 theme = "m10x"
 
 [params]
-  author = "John Doe"
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium."
+  author = "Tapan Chandra"
+  description = "Welcome to the personal site of Tapan Nallan."
   [[params.social]]
     name = "github"
-    url = "https://github.com/gohugoio"
+    url = "https://github.com/tapanchandra"
   [[params.social]]
     name = "twitter"
-    url = "https://twitter.com/gohugoio"
+    url = "https://twitter.com/codingjack_"
