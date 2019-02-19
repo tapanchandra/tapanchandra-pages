@@ -1,4 +1,4 @@
-baseURL = "http://www.tapanchandra.com"
+baseURL = "https://www.tapanchandra.com"
 languageCode = "en-us"
 title = "Rusty Coder's Blog"
 theme = "m10x"
