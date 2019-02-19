@@ -14,15 +14,14 @@ before_install:
 script:
 - docker run --rm -it -v $(pwd):/src jguyomard/hugo-builder hugo
 
-after_success:
-- ls public
-- mkdir -p public
-- echo "tapanchandra.com" > ./public/CNAME
-- ls public
 deploy:
-  provider: pages  
+  provider: pages
+  repo: tapanchandra/tapanchandra.github.io
+  target-branch: master
+  fqdn: tapanchandra.com
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  
+  github-token: $GITHUB_TOKEN
+  verbose: true
   local-dir: public
   on:
     branch: master
