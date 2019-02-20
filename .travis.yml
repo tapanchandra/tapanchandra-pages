@@ -18,7 +18,7 @@ deploy:
   provider: pages
   repo: tapanchandra/tapanchandra.github.io
   target-branch: master
-  fqdn: tapanchandra.com
+  fqdn: www.tapanchandra.com
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   verbose: true
